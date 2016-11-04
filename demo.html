@@ -1,0 +1,66 @@
+<title>radarJS v0.1</title>
+
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+<script src="raphael.2.1.0.min.js"></script>
+<script src="radarJS.js"></script>
+<style>
+	body {
+		font-family: 'Helvetica';
+		background-color:rgb(245,245,245);
+	}
+
+	.radar-container{
+		display:inline-block;
+		height: 400px;
+		width: 400px;
+		margin: 20px;
+	}
+</style>
+
+<h1>radarJS</h1>
+<div id="radar-container-1" class="radar-container"></div>
+<div id="radar-container-2" class="radar-container"></div>
+<div id="radar-container-3" class="radar-container"></div>
+<div id="radar-container-4" class="radar-container"></div>
+
+<script>
+	var labels = ['Holds', 'AHT', 'Consults', 'Transfers', 'Asc Out', 'Repeats', 'SLA', 'ASA', 'IVR (HT)', 'Misroutes'];
+
+	var a = new radarJS({
+		id: "radar-container-1",
+		//data: [2.2, 5.4, 7.6, 6.7, 8.1, 8.4, 5.4, 6.5, 9.6, 5.4],
+		data: [10, 5, 7, 6, 8, 8, 5, 6, 9.9, 5],
+		labels: labels
+	});	
+
+	var b = new radarJS({
+		id: "radar-container-2",
+		data: [3, 5, 9, 2, 9, 9, 10, 5, 5, 7],
+		labels: labels,
+		fillColor: 'rgba(231, 76, 60,0.4)'
+	});
+	
+	var c = new radarJS({
+		id: "radar-container-3",
+		data: [10, 6, 6, 6, 8, 8, 5, 6, 9, 10],
+		labels: labels,
+		fillColor: 'rgba(230, 126, 34,0.4)'
+	});
+	
+	var d = new radarJS({
+		id: "radar-container-4",
+		data: [9, 5, 7, 7, 9, 8, 8, 9, 7, 6],
+		labels: labels,
+		fillColor: 'rgba(155, 89, 182,0.4)',
+	});
+	
+	
+	function getRandomArray(n){
+		var ret = [];
+		for (var i = 0; i < n; i++) {
+			ret.push(Math.round(Math.random() * 8) + 1)
+		}
+		return ret;
+	}
+
+</script>

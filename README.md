@@ -9,4 +9,4 @@ Lightweight library for making responsive SVG radar charts
 </ol>
 
 ### Demo
-You can find a demo of clockJS [here](http://olliedavies.co.uk/radar/).
+You can find a demo of radarJS [here](http://olliedavies.co.uk/radar/).
